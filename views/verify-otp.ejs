@@ -1,0 +1,13 @@
+<%- include('layout', { title: 'Verify OTP', body: `
+  <form method=\"POST\" action=\"/verify\" class=\"card\">
+    <h2>Verify OTP</h2>
+    ${typeof error !== 'undefined' && error ? `<div class=\\\"error\\\">${error}</div>` : ''}
+    <p>OTP sent to: <b>${email}</b></p>
+    <label>Enter 6-digit OTP</label>
+    <input type=\"text\" name=\"code\" pattern=\"\\d{6}\" required />
+    <button type=\"submit\">Verify</button>
+  </form>
+` }) %>
+
+
+

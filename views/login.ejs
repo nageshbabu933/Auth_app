@@ -1,0 +1,15 @@
+<%- include('layout', { title: 'Login', body: `
+  <form method="POST" action="/login" class="card">
+    <h2>Login</h2>
+    ${typeof error !== 'undefined' && error ? `<div class=\"error\">${error}</div>` : ''}
+    <label>Email</label>
+    <input type="email" name="email" required />
+    <label>Password</label>
+    <input type="password" name="password" required />
+    <button type="submit">Login</button>
+    <p>New user? <a href="/register">Register</a></p>
+  </form>
+` }) %>
+
+
+

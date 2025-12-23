@@ -1,0 +1,9 @@
+<%- include('layout', { title: 'Dashboard', body: `
+  <div class="card">
+    <h2>Welcome, ${user.name}</h2>
+    <p>You are logged in as <b>${user.email}</b></p>
+    <form method="POST" action="/logout">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+` }) %>
